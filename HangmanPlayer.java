@@ -7,7 +7,8 @@ public class HangmanPlayer {
     public static void main(String[] args) {
         // Set up the game's base variables
         int min = 0;
-        int max = 9;
+        int maxCategory = 10;
+        int maxWord = 14;
         boolean guessCheck;
         String yesno = "";
         System.out.println("Instructions: ");
@@ -25,28 +26,40 @@ public class HangmanPlayer {
         System.out.println("Time to Play: ");
         System.out.println("-------------------------------------------");
         String word = "";
-        int chooseCategory = (int)(Math.random() * (max - min + 1) + min);
-        int chooseWord = (int)(Math.random() * (max - min + 1) + min);
+        int chooseCategory = (int)(Math.random() * (maxCategory - min + 1) + min);
+        int chooseWord = (int)(Math.random() * (maxWord - min + 1) + min);
         String[] instrumentWords=new String[] {"saxophone","violin","cello","clarinet","trumpet","harp",
-                "piano","flute","drums","tuba"};
+                "piano","flute","drums","tuba","trombone","euphonium","viola","bass","guitar"};
+
         String[] actionWords=new String[] {"play","swim","run","bike","aim","chew",
-                "jump","kick","hide","punch"};
+                "jump","kick","hide","punch","fall","duck","throw","grab","shiver"};
+
         String[] colorWords=new String[] {"red","yellow","black","brown","orange","white",
-                "pink","blue","purple","green",};
+                "pink","blue","purple","green","magenta","cyan","lime","olive"};
+
         String[] foodWords=new String[] {"taco","burger","burrito","salad","pizza","soup",
-                "sandwich","pasta","bread","quesadilla"};
+                "sandwich","pasta","bread","quesadilla","casserole","nachos","rolls","cheese","sushi"};
+
         String[] petWords=new String[] {"dog","cat","rabbit","bird","frog","fish",
-                "hamster","bunny","snake","ferret"};
+                "hamster","bunny","snake","ferret","tarantula","turtle","rat","mouse","alligator"};
+
         String[] sportWords=new String[] {"soccer","volleyball","cricket","football","baseball","crosscountry",
-                "basketball","softball","tennis","rugby"};
-        String[] liquidWords=new String[] {"water","alchohol","juice","soda","gasoline","bleach",
-                "soap","slime","sauce","cream"};
+                "basketball","softball","tennis","rugby","golf","track","lacrosse","fencing","swimming"};
+
+        String[] liquidWords=new String[] {"water","beer","juice","soda","gasoline","bleach",
+                "soap","slime","sauce","cream","glue","paint","mercury","wine","rum"};
+
         String[] vehiclesWords=new String[] {"car","motorcycle","train","plane","boat","helicopter",
-                "wagon","bus","truck","rickshaw"};
+                "wagon","bus","truck","rickshaw","bicycle","tricycle","scooter","unicycle","dumptruck"};
+
         String[] occupationWords=new String[] {"doctor","officer","lawyer","teacher","firefighter","astronaut",
-                "engineer","chef","businessman","consultant"};
+                "engineer","chef","businessman","consultant","soldier","salesman","investor","entrepreneur","nurse"};
+
         String[] languageWords=new String[] {"hindi","english","french","arabic","german","spanish",
-                "mandarin","japanese","sanskrit","egyptian"};
+                "mandarin","japanese","sanskrit","egyptian","swedish","tamil","marathi","italian","portugese"};
+
+        String[] locationWords=new String[] {"house","station","gallery","school","hospital","carnival",
+				"mall","outpost","plant","store","refinery","hotel","factory","port","camp"};
 
         // Choosing a category and word
         switch(chooseCategory) {
@@ -90,6 +103,10 @@ public class HangmanPlayer {
                 word=languageWords[chooseWord];
                 System.out.println("Your category is language");
                 break;
+            case 10:
+            	word=locationWords[chooseWord];
+            	System.out.println("Your category is locations");
+            	break;
         }
 
         // Set up the game
