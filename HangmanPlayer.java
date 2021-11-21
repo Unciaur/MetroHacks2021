@@ -162,7 +162,8 @@ public class HangmanPlayer {
                 System.out.println("What is the word: ");
                 String wordGuess=sc.next();
                 if(word.equalsIgnoreCase(wordGuess)){
-                    System.out.println("The word "+guess+" is the word. You won. Good job!");
+                    System.out.println("The word "+word+" is the word. You won. Good job!");
+                    break;
                 } else {
                     System.out.println("The word "+guess+" does not match the word");
                     lives=lives-1;
