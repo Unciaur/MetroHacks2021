@@ -1,6 +1,8 @@
 package MetroHacks2021;
+
 import java.util.Random;
 import java.util.Scanner;
+
 public class HangmanPlayer {
 	public static void main(String[] args) {
 				int min = 0;
