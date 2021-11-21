@@ -27,6 +27,16 @@ public class FifteenPuzzle {
 
     }
 
+    public static boolean checkIfWin(int[][]board) {
+        boolean winyesno;
+        if(board[1][1]==1 && board[1][2]==2 && board[1][3]==3 && board[1][4]==4 && board[2][1]==5 && board[2][2]==6 && board[2][3]==7 && board[2][4]==8 && board[3][1]==9 && board[3][2]==10 && board[3][3]==11 && board[3][4]==12 && board[4][1]==13 && board[4][2]==14 && board[4][3]==15) {
+            winyesno = true;
+        } else {
+            winyesno = false;
+        }
+        return winyesno;
+    }
+
     public static void printArr(int[] arr) {
         for (int elem : arr) {
             System.out.print(elem + "\t");
