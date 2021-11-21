@@ -40,8 +40,8 @@ public class FifteenPuzzle {
             pickPos = findNum(pick, board);
             dx = Math.abs(pickPos[0]-zeroPos[0]);
             dy = Math.abs(pickPos[1]-zeroPos[1]);
-            if(dx<=1 && dy <= 1){
-                System.out.println("test");
+            if(dx<=1 && dy <= 1 && dx != dy){
+                System.out.println("Slide successful.");
                 temp = new int[]{pickPos[0], pickPos[1]};
                 pickPos = new int[]{zeroPos[0], zeroPos[1]};
                 zeroPos = new int[]{temp[0], temp[1]};
