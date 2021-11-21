@@ -6,10 +6,10 @@ import java.util.Arrays;
 public class FifteenPuzzle {
     public static void main(String[] args) {
         int[][] board = new int[4][4];
-        ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15));
+        ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15));
 
         // Assign board values
-        for(int i = 0; i < 15; i++){
+        for(int i = 0; i < 16; i++){
             int ind = (int)(Math.random()*nums.size());
             int num = nums.get(ind);
             int row = 0;
