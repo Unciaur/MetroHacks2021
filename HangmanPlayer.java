@@ -1,5 +1,5 @@
 package MetroHacks2021;
-//update
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -59,7 +59,7 @@ public class HangmanPlayer {
                 "mandarin","japanese","sanskrit","egyptian","swedish","tamil","marathi","italian","portugese"};
 
         String[] locationWords=new String[] {"house","station","gallery","school","hospital","carnival",
-				"mall","outpost","plant","store","refinery","hotel","factory","port","camp"};
+                "mall","outpost","plant","store","refinery","hotel","factory","port","camp"};
 
         // Choosing a category and word
         switch(chooseCategory) {
@@ -104,9 +104,9 @@ public class HangmanPlayer {
                 System.out.println("Your category is language");
                 break;
             case 10:
-            	word=locationWords[chooseWord];
-            	System.out.println("Your category is locations");
-            	break;
+                word=locationWords[chooseWord];
+                System.out.println("Your category is locations");
+                break;
         }
 
         // Set up the game
@@ -120,6 +120,7 @@ public class HangmanPlayer {
             displayWord += "_ ";
         }
         String guessed = "";
+        boolean win = false;
 
         // Game loop
         while(lives > 0) {
@@ -163,6 +164,7 @@ public class HangmanPlayer {
                 String wordGuess=sc.next();
                 if(word.equalsIgnoreCase(wordGuess)){
                     System.out.println("The word "+word+" is the word. You won. Good job!");
+                    win = true;
                     break;
                 } else {
                     System.out.println("The word "+guess+" does not match the word");
@@ -176,7 +178,9 @@ public class HangmanPlayer {
             }
         }
         // Game over
-        System.out.println("You lost. Nice try. The word was "+word+".");
+        if(!win){
+            System.out.println("You lost. Nice try. The word was " + word + ".");
+        }
     }
 }
 
