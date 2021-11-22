@@ -1,4 +1,6 @@
-package MetroHacks2021;
+//disabled after GUI failed
+
+/*package MetroHacks2021;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -183,3 +185,4 @@ public class HangmanPlayer {
     }
     //update
 }
+*/
