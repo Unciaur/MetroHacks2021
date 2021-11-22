@@ -20,7 +20,6 @@ public class HangmanPlayer {
         System.out.println("You will guess a letter. You have six lives.");
         System.out.println("For every wrong guess, a life will be lost.");
         System.out.println("After a guess, you will able to guess the word.");
-        System.out.println("For every wrong guess, a life will be lost.");
         System.out.println("Have fun, and Good Luck!");
         System.out.println("\n");
         System.out.println("Time to Play: ");
